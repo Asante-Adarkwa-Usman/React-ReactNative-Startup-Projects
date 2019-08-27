@@ -1,0 +1,23 @@
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Welcome from './Components/Welcome'
+import Greet from './Components/Greet'
+import ClickOk from './Components/ClickOk'
+import EventTest from './Components/EventTest'
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+     { /*<Welcome/>
+      <Greet name="Asante" nickName="Bobbie React"/>*/}
+     {/*<ClickOk/>*/} 
+     <EventTest/>
+
+      </div>
+    );
+  }
+}
+
+export default App;

@@ -1,0 +1,35 @@
+body,
+label {
+    background-color: lightsteelblue;
+    font-family: arial;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+label {
+    display: table-cell;
+    text-align: right;
+}
+
+input {
+    display: table-cell;
+}
+
+div.row {
+    display: table-row;
+}
+
+button {
+    font-family: 'arial';
+    font-size: 18px;
+    color: rgb(59, 41, 41);
+}
+
+input[type="number"] {
+    font-family: 'arial';
+    font-size: 18px;
+    color: rgb(59, 41, 41);
+    height: 25px;
+    width: 35px;
+}
