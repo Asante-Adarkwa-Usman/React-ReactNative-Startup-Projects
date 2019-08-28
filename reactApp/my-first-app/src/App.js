@@ -5,6 +5,7 @@ import Welcome from './Components/Welcome'
 import Greet from './Components/Greet'
 import ClickOk from './Components/ClickOk'
 import EventTest from './Components/EventTest'
+import ParentComponent from './Components/ParentComponent'
 
 class App extends Component {
   render() {
@@ -13,7 +14,9 @@ class App extends Component {
      { /*<Welcome/>
       <Greet name="Asante" nickName="Bobbie React"/>*/}
      {/*<ClickOk/>*/} 
-     <EventTest/>
+     {/*<EventTest/>*/}
+     <ParentComponent/>
+
 
       </div>
     );
