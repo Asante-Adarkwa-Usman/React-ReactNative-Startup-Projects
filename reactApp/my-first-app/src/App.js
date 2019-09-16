@@ -7,6 +7,8 @@ import ClickOk from './Components/ClickOk'
 import EventTest from './Components/EventTest'
 import ParentComponent from './Components/ParentComponent'
 import NameList from './Components/NameList'
+import StyleSheet from './Components/Stylesheet'
+import FormsComp from './Components/FormsComp'
 
 class App extends Component {
   render() {
@@ -17,7 +19,9 @@ class App extends Component {
      {/*<ClickOk/>*/} 
      {/*<EventTest/>*/}
      {/*<ParentComponent/>*/}
-     <NameList/>
+     {/*<NameList/>*/}
+    {/*<StyleSheet/>*/}
+    <FormsComp/>
 
       </div>
     );
