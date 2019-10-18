@@ -47,7 +47,7 @@ var Filter = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'section',
-        { className: 'filter' },
+        { id: 'filter' },
         _react2.default.createElement(
           'h4',
           null,
