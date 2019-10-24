@@ -39,7 +39,7 @@ export default class Listings extends Component {
     </section>
 
     <section className="listings-results">
-
+       <div className="listing">
        <div className="listing-img">
            <span className="Address">Address</span>
            <div className="details">
@@ -50,11 +50,14 @@ export default class Listings extends Component {
 
                  <div className="listing-details">
                     <div className="floor-space">
-                     <i className="far fa-square" aria-hidden="true" ></i>
+                    <i className="fa fa-square-o" aria-hidden="true"></i>
+
                        <span>1000 ft&sup2;</span>
                  </div>
+                 </div>
                     <div className="bedrooms">
-                      <i className="fas fa-bed" aria-hidden="true"></i>
+                    <i className="fa fa-bed" aria-hidden="true"></i>
+
                          <span>4 bedrooms</span>
 
                     </div>

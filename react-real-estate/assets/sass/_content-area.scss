@@ -1,3 +1,12 @@
+#content-area{
+  overflow: auto;
+  width: 100%;
+  background: black;
+
+}
+
+
+
 #filter{
   background: $grey;
   width: 30%;
@@ -49,7 +58,7 @@
          padding: 10px 0;
          input[type="checkbox"]{
            float: right;
-          
+
 
          }
 
@@ -71,15 +80,16 @@
       background: transparent;
       font-size: 2rem;
       border: none;
-      border-bottom: 1px solid  $lightgrey;
+      border-bottom: 1px solid $lightgrey;
       margin-bottom: 20px;
-      color: $lightgrey;
+      color: $darkgrey;
 
     }
   }
 
   .sortby-area{
     margin-bottom: 20px;
+
     .results{
 
       color: $lightgrey;
@@ -89,7 +99,6 @@
   }
   .sort-option{
     float: right;
-
     .select{
       font-size: .9rem;
       font-weight: 300;
@@ -98,13 +107,39 @@
       display: inline-block;
       padding: 20px;
       margin-right: 15px;
+      vertical-align: top;
     }
     .view{
       display: inline-block;
+       margin-left: 15px;
       .fa{
         font-size: 1.5rem;
         margin-right: 15px;
       }
+    }
+  }
+
+  .listings-results{
+    margin-bottom: 60px;
+
+    .listing{
+      background: $white;
+      width: 33.33%;
+      border-radius: 5px;
+
+      -webkit-box-shadow: 0px 9px 54px -4px rgba(235,232,235,1);
+      -moz-box-shadow: 0px 9px 54px -4px rgba(235,232,235,1);
+       box-shadow: 0px 9px 54px -4px rgba(235,232,235,1);
+
+    }
+    .listing-img{
+      background: url(https://images.homify.com/images/a_0,c_fit,f_auto,q_auto,w_1108/v1468492835/p/photo/image/1583920/2/modern-houses-photos-by-francois-marais-architects-i-homify.jpg)
+      no-repeat center center;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+      background-size: cover;
+      min-height: 280px;
     }
   }
 
