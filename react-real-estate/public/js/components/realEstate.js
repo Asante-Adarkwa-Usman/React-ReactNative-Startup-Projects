@@ -375,69 +375,89 @@ var Listings = function (_Component) {
           { className: 'listings-results' },
           _react2.default.createElement(
             'div',
-            { className: 'listing' },
+            { className: 'col-md-3' },
             _react2.default.createElement(
               'div',
-              { className: 'listing-img' },
+              { className: 'listing' },
               _react2.default.createElement(
-                'span',
-                { className: 'Address' },
-                'Address'
+                'div',
+                { className: 'listing-img' },
+                _react2.default.createElement(
+                  'span',
+                  { className: 'address' },
+                  'Dr Asante St'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'details' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'col-md-3' },
+                    _react2.default.createElement('div', { className: 'user-img' })
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'col-md-09' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'user-details' },
+                      _react2.default.createElement(
+                        'span',
+                        { className: 'user-name' },
+                        'Asante Emmanuel'
+                      ),
+                      _react2.default.createElement(
+                        'span',
+                        { className: 'post-date' },
+                        '05/06/2019'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'listing-details' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'floor-space' },
+                        _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
+                        _react2.default.createElement(
+                          'span',
+                          null,
+                          '1000 ft\xB2'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'bedrooms' },
+                        _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                        _react2.default.createElement(
+                          'span',
+                          null,
+                          '4 bedrooms'
+                        )
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'view-btn' },
+                      'View listing'
+                    )
+                  )
+                )
               ),
               _react2.default.createElement(
                 'div',
-                { className: 'details' },
-                _react2.default.createElement('div', { className: 'user-img' }),
-                _react2.default.createElement('div', { className: 'user-details' }),
+                { className: 'bottom-info' },
                 _react2.default.createElement(
                   'span',
-                  { className: 'user-name' },
-                  'Asante Emmanuel'
+                  { className: 'price' },
+                  ' $1000 / month '
                 ),
                 _react2.default.createElement(
                   'span',
-                  { className: 'post-date' },
-                  '05/06/2019'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'listing-details' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'floor-space' },
-                    _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
-                    _react2.default.createElement(
-                      'span',
-                      null,
-                      '1000 ft\xB2'
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'bedrooms' },
-                  _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    '4 bedrooms'
-                  )
+                  { className: 'location' },
+                  _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
+                  ' Atonsu, Kumasi'
                 )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'bottom-info' },
-              _react2.default.createElement(
-                'span',
-                null,
-                ' $1000 / month '
-              ),
-              _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
-                ' Atonsu, Kumasi'
               )
             )
           )
