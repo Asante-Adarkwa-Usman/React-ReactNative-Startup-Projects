@@ -122,7 +122,7 @@
 
   .listings-results{
     margin-bottom: 60px;
-    display: inline-block;
+
     .listing{
       background: $white;
       border-radius: 5px;
@@ -168,7 +168,7 @@
 
 
       .details{
-          transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
         opacity: 0;
         padding: 30px;
         position: absolute;
@@ -203,6 +203,7 @@
        -moz-background-size: cover;
        -o-background-size: cover;
         background-size: cover;
+  
 
       }
       .user-details{
@@ -291,7 +292,7 @@
   }
 }
 
-.col-md-03{
+.col-md-3{
   width: 25%;
   display: inline-block;
   vertical-align: top;
