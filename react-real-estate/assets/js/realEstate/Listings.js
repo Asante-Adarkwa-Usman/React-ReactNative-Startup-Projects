@@ -63,7 +63,7 @@ loopListings = () => {
                <span className="address">{listings.address}</span>
                <div className="details">
                  <div className="col-md-3 ">
-                  <div className="user-img"></div>
+                  <div className="user-img"  style= {{  background:`url("${listings.ownerImage}") center center`}}></div>
                    </div>
                   <div className="col-md-09">
                      <div className="user-details">
