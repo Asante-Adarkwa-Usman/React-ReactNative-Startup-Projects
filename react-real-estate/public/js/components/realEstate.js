@@ -316,14 +316,205 @@ var Listings = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Listings.__proto__ || Object.getPrototypeOf(Listings)).call(this));
 
+    _this.loopListings = function () {
+
+      _react2.default.createElement(
+        'div',
+        { className: 'col-md-3' },
+        _react2.default.createElement(
+          'div',
+          { className: 'listing' },
+          _react2.default.createElement(
+            'div',
+            { className: 'listing-img' },
+            _react2.default.createElement(
+              'span',
+              { className: 'address' },
+              'Dr Asante St'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'details' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-3 ' },
+                _react2.default.createElement('div', { className: 'user-img' })
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-09' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'user-details' },
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'user-name' },
+                    'Asante Emmanuel'
+                  ),
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'post-date' },
+                    '05/06/2019'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'listing-details' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'floor-space' },
+                    _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      '1000 ft\xB2'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'bedrooms' },
+                    _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      '4 bedrooms'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'view-btn' },
+                  'View listing'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'bottom-info' },
+            _react2.default.createElement(
+              'span',
+              { className: 'price' },
+              ' $1000 / month '
+            ),
+            _react2.default.createElement(
+              'span',
+              { className: 'location' },
+              _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
+              ' Atonsu, Kumasi'
+            )
+          )
+        )
+      );
+
+      var listingsData = _this.props.listingsData;
+
+
+      return listingsData.map(function (listings, index) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'col-md-3', key: index },
+          _react2.default.createElement(
+            'div',
+            { className: 'listing' },
+            _react2.default.createElement(
+              'div',
+              { className: 'listing-img', style: { background: 'url("' + listings.image + '") no-repeat center center' } },
+              _react2.default.createElement(
+                'span',
+                { className: 'address' },
+                listings.address
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'details' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col-md-3 ' },
+                  _react2.default.createElement('div', { className: 'user-img' })
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col-md-09' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'user-details' },
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'user-name' },
+                      listings.owner
+                    ),
+                    _react2.default.createElement(
+                      'span',
+                      { className: 'post-date' },
+                      listings.date
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'listing-details' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'floor-space' },
+                      _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
+                      _react2.default.createElement(
+                        'span',
+                        null,
+                        '1000 ft\xB2'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'bedrooms' },
+                      _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                      _react2.default.createElement(
+                        'span',
+                        null,
+                        listings.rooms
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'view-btn' },
+                    'View listing'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'bottom-info' },
+              _react2.default.createElement(
+                'span',
+                { className: 'price' },
+                ' $',
+                listings.price,
+                ' '
+              ),
+              _react2.default.createElement(
+                'span',
+                { className: 'location' },
+                _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
+                ' ',
+                listings.city,
+                ', ',
+                listings.state
+              )
+            )
+          )
+        );
+      });
+    };
+
     _this.clickedBtn = function () {
       console.log('swag');
     };
 
     _this.state = {
       name: 'Joe'
-    };
-    return _this;
+      //  this.loopListings = this.loopListings.bind(this)
+    };return _this;
   }
 
   _createClass(Listings, [{
@@ -373,101 +564,14 @@ var Listings = function (_Component) {
         _react2.default.createElement(
           'section',
           { className: 'listings-results' },
-          _react2.default.createElement(
-            'div',
-            { className: 'col-md-3' },
-            _react2.default.createElement(
-              'div',
-              { className: 'listing' },
-              _react2.default.createElement(
-                'div',
-                { className: 'listing-img' },
-                _react2.default.createElement(
-                  'span',
-                  { className: 'address' },
-                  'Dr Asante St'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'details' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'col-md-3' },
-                    _react2.default.createElement('div', { className: 'user-img' })
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'col-md-09' },
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'user-details' },
-                      _react2.default.createElement(
-                        'span',
-                        { className: 'user-name' },
-                        'Asante Emmanuel'
-                      ),
-                      _react2.default.createElement(
-                        'span',
-                        { className: 'post-date' },
-                        '05/06/2019'
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'listing-details' },
-                      _react2.default.createElement(
-                        'div',
-                        { className: 'floor-space' },
-                        _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
-                        _react2.default.createElement(
-                          'span',
-                          null,
-                          '1000 ft\xB2'
-                        )
-                      ),
-                      _react2.default.createElement(
-                        'div',
-                        { className: 'bedrooms' },
-                        _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
-                        _react2.default.createElement(
-                          'span',
-                          null,
-                          '4 bedrooms'
-                        )
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'view-btn' },
-                      'View listing'
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'bottom-info' },
-                _react2.default.createElement(
-                  'span',
-                  { className: 'price' },
-                  ' $1000 / month '
-                ),
-                _react2.default.createElement(
-                  'span',
-                  { className: 'location' },
-                  _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
-                  ' Atonsu, Kumasi'
-                )
-              )
-            )
-          )
+          this.loopListings()
         ),
         _react2.default.createElement(
           'section',
-          { className: 'pagination' },
+          { id: 'pagination' },
           _react2.default.createElement(
             'ul',
-            { className: 'pagination-numbers' },
+            { className: 'pages' },
             _react2.default.createElement(
               'li',
               null,
@@ -475,7 +579,7 @@ var Listings = function (_Component) {
             ),
             _react2.default.createElement(
               'li',
-              null,
+              { className: 'active' },
               '1'
             ),
             _react2.default.createElement(
@@ -516,7 +620,96 @@ exports.default = Listings;
 
 /***/ }),
 
-/***/ 237:
+/***/ 234:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var listingsData = [{
+
+  owner: 'Asante Adarkwa Usman',
+  date: '14/12/2019',
+  address: '30-35 Nkruma ave',
+  city: 'Atonsu',
+  state: 'Agogo',
+  rooms: 4,
+  price: 23222,
+  floorSpace: 20,
+  extras: ['elevator', 'gym'],
+  homeType: 'Ranch',
+  image: 'https://cdn.shopify.com/s/files/1/0250/2832/products/IMG_7223_1024x1024.jpg?v=1571439073'
+}, {
+  owner: 'Ntiamiah Julia',
+  date: '7/1/2019',
+  address: '35 Katanka st',
+  city: 'Ashtown',
+  state: 'Gyinyase',
+  rooms: 3,
+  price: 35000,
+  floorSpace: 100,
+  extras: ['Swimming Pool', 'gym'],
+  homeType: 'Storey',
+  image: 'https://images.homify.com/images/a_0,c_fit,f_auto,q_auto,w_1108/v1468492835/p/photo/image/1583920/2/modern-houses-photos-by-francois-marais-architects-i-homify.jpg'
+}, {
+  owner: 'Asante Agyei Elijah',
+  date: '4/7/2019',
+  address: '45 Nhyiaso st',
+  city: 'Berlin Top',
+  state: 'High Tension',
+  rooms: 8,
+  price: 53222,
+  floorSpace: 500,
+  extras: ['elevator', 'gym', 'Swimming Pool'],
+  homeType: 'Compound',
+  image: 'https://images.homify.com/images/a_0,c_fit,f_auto,q_auto,w_1108/v1468492835/p/photo/image/1583920/2/modern-houses-photos-by-francois-marais-architects-i-homify.jpg'
+}, {
+  owner: 'Saanaa Mastura',
+  date: '28/5/2019',
+  address: '65 ElJhay ave',
+  city: 'Ashtown',
+  state: 'Esreso',
+  rooms: 6,
+  price: 1356,
+  floorSpace: 20,
+  extras: ['gym'],
+  homeType: 'Storey',
+  image: 'https://cdn.shopify.com/s/files/1/0250/2832/products/IMG_7223_1024x1024.jpg?v=1571439073'
+}, {
+  owner: 'Asante Emmanuel',
+  date: '14/10/2019',
+  address: '3 Tanka st',
+  city: 'Berlin Top',
+  state: 'Dompoase',
+  rooms: 7,
+  price: 65000,
+  floorSpace: 200,
+  extras: ['Swimming Pool', 'gym', 'Finished Basement', 'elevator'],
+  homeType: 'Ranch',
+  image: 'https://images.homify.com/images/a_0,c_fit,f_auto,q_auto,w_1108/v1468492835/p/photo/image/1583920/2/modern-houses-photos-by-francois-marais-architects-i-homify.jpg'
+}, {
+  owner: 'Anakwa Priscilla',
+  date: '19/6/2019',
+  address: '74 Juliet ave',
+  city: 'Atonsu',
+  state: 'Kotei',
+  rooms: 5,
+  price: 45000,
+  floorSpace: 100,
+  extras: ['Swimming Pool', 'gym', 'Finished Basement'],
+  homeType: 'Compound',
+  image: 'https://cdn.shopify.com/s/files/1/0250/2832/products/IMG_7223_1024x1024.jpg?v=1571439073'
+}];
+
+exports.default = listingsData;
+
+/***/ }),
+
+/***/ 238:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -544,6 +737,10 @@ var _Listings = __webpack_require__(233);
 
 var _Listings2 = _interopRequireDefault(_Listings);
 
+var _ListingsData = __webpack_require__(234);
+
+var _ListingsData2 = _interopRequireDefault(_ListingsData);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -565,7 +762,9 @@ var App = function (_Component) {
     };
 
     _this.state = {
-      name: 'Joe'
+      name: 'Joe',
+      listingsData: _ListingsData2.default
+
     };
     return _this;
   }
@@ -573,6 +772,7 @@ var App = function (_Component) {
   _createClass(App, [{
     key: 'render',
     value: function render() {
+      console.log(this.state);
       return _react2.default.createElement(
         'div',
         null,
@@ -581,7 +781,7 @@ var App = function (_Component) {
           'section',
           { id: 'content-area' },
           _react2.default.createElement(_Filter2.default, null),
-          _react2.default.createElement(_Listings2.default, null)
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.listingsData })
         )
       );
     }
@@ -596,4 +796,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), app);
 
 /***/ })
 
-},[237]);
+},[238]);

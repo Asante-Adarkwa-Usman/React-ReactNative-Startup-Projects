@@ -34,32 +34,27 @@ class FormsComp extends Component {
     }
 
     render() {
-        return ( <
-            form >
-            <
-            div >
-
-            <
-            label style = { this.formDesign } > Name < /label> <
-            input type = 'text'
+        return ( 
+            <div>
+                <form >
+            <label style = { this.formDesign } > Name </label> 
+            <input type = 'text'
             value = { this.state.name }
-            onChange = { this.HandlesNameChange } > < /input>
+            onChange = { this.HandlesNameChange } />
 
-            <
-            label style = { this.formDesign } > Password < /label> <
-            input type = 'password'
+            <label style = { this.formDesign } > Password </label>
+             <input type = 'password'
             value = { this.state.Password }
-            onChange = { this.HandlesPasswordChange } > < /input>
+            onChange = { this.HandlesPasswordChange } />
 
-            <
-            label style = { this.formDesign } > Confirm Password < /label> <
-            input type = 'password'
+            <label style = { this.formDesign } > Confirm Password </label>
+             <input type = 'password'
             value = { this.state.ConfirmPassword }
-            onChange = { this.HandlesConfirmPasswordChange } > < /input>
+            onChange = { this.HandlesConfirmPasswordChange } />
 
-            <
-            /div> < /
-            form >
+  
+          </form >
+            </div>
         )
     }
 }

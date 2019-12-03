@@ -8,7 +8,98 @@ export default class Listings extends Component {
     this.state = {
       name: 'Joe'
     }
+  //  this.loopListings = this.loopListings.bind(this)
   }
+
+
+loopListings = () => {
+
+    <div className="col-md-3">
+      <div className="listing">
+      <div className="listing-img">
+          <span className="address">Dr Asante St</span>
+          <div className="details">
+            <div className="col-md-3 ">
+             <div className="user-img"></div>
+              </div>
+             <div className="col-md-09">
+                <div className="user-details">
+                 <span className="user-name">Asante Emmanuel</span>
+                 <span className="post-date">05/06/2019</span>
+                 </div>
+                <div className="listing-details">
+                   <div className="floor-space">
+                    <i className="fa fa-square-o" aria-hidden="true"></i>
+                     <span>1000 ft&sup2;</span>
+                    </div>
+                   <div className="bedrooms">
+                     <i className="fa fa-bed" aria-hidden="true"></i>
+                     <span>4 bedrooms</span>
+                      </div>
+                 </div>
+                 <div className="view-btn">
+                 View listing
+                  </div>
+               </div>
+
+           </div>
+
+          </div>
+
+         <div className="bottom-info">
+              <span className="price"> $1000 / month </span>
+              <span className="location"><i className="fa fa-map-marker" aria-hidden="true" ></i> Atonsu, Kumasi</span>
+        </div>
+
+     </div>
+   </div>
+
+   var {listingsData} = this.props
+
+    return listingsData.map((listings, index) => {
+      return (   <div className="col-md-3" key={index}>
+           <div className="listing">
+           <div className="listing-img" style= {{background: `url("${listings.image}") no-repeat center center`}}>
+               <span className="address">{listings.address}</span>
+               <div className="details">
+                 <div className="col-md-3 ">
+                  <div className="user-img"></div>
+                   </div>
+                  <div className="col-md-09">
+                     <div className="user-details">
+                      <span className="user-name">{listings.owner}</span>
+                      <span className="post-date">{listings.date}</span>
+                      </div>
+                     <div className="listing-details">
+                        <div className="floor-space">
+                         <i className="fa fa-square-o" aria-hidden="true"></i>
+                          <span>1000 ft&sup2;</span>
+                         </div>
+                        <div className="bedrooms">
+                          <i className="fa fa-bed" aria-hidden="true"></i>
+                          <span>{listings.rooms}</span>
+                           </div>
+                      </div>
+                      <div className="view-btn">
+                      View listing
+                       </div>
+                    </div>
+
+                </div>
+
+               </div>
+
+              <div className="bottom-info">
+                   <span className="price"> ${listings.price} </span>
+                   <span className="location"><i className="fa fa-map-marker" aria-hidden="true" ></i> {listings.city}, {listings.state}</span>
+             </div>
+
+          </div>
+        </div>)
+    } )
+  }
+
+
   clickedBtn = () => {
     console.log('swag')
   }
@@ -39,55 +130,17 @@ export default class Listings extends Component {
     </section>
 
     <section className="listings-results">
-     <div className="col-md-3">
-       <div className="listing">
-       <div className="listing-img">
-           <span className="address">Dr Asante St</span>
-           <div className="details">
-             <div className="col-md-3">
-              <div className="user-img"></div>
-               </div>
-              <div className="col-md-09">
-                 <div className="user-details">
-                  <span className="user-name">Asante Emmanuel</span>
-                  <span className="post-date">05/06/2019</span>
-                  </div>
-                 <div className="listing-details">
-                    <div className="floor-space">
-                     <i className="fa fa-square-o" aria-hidden="true"></i>
-                      <span>1000 ft&sup2;</span>
-                     </div>
-                    <div className="bedrooms">
-                      <i className="fa fa-bed" aria-hidden="true"></i>
-                      <span>4 bedrooms</span>
-                       </div>
-                  </div>
-                  <div className="view-btn">
-                  View listing
-                   </div>
-                </div>
 
-            </div>
+     {this.loopListings()}
 
-           </div>
-
-          <div className="bottom-info">
-               <span className="price"> $1000 / month </span>
-               <span className="location"><i className="fa fa-map-marker" aria-hidden="true" ></i> Atonsu, Kumasi</span>
-         </div>
-
-      </div>
-    </div>
-
-      
 
 
   </section>
 
-    <section className="pagination">
-    <ul className="pagination-numbers">
-        <li>Prev</li>
-          <li>1</li>
+    <section id="pagination">
+    <ul className="pages">
+        <li >Prev</li>
+          <li className="active">1</li>
             <li>2</li>
               <li>3</li>
                 <li>4</li>

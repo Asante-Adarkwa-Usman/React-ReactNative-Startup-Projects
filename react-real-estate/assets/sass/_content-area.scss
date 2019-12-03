@@ -1,7 +1,7 @@
 #content-area{
   overflow: auto;
   width: 100%;
-  background: black;
+
 
 }
 
@@ -203,7 +203,7 @@
        -moz-background-size: cover;
        -o-background-size: cover;
         background-size: cover;
-  
+
 
       }
       .user-details{
@@ -219,14 +219,15 @@
           margin-top: 3px;
           margin-bottom: 3px;
         }
+        .post-date{
+            font-size: .9rem;
+             display: block;
+             color: rgba(255, 255, 255,.7 );
+        }
+
 
       }
 
-      .post-date{
-          font-size: .9rem;
-           display: block;
-           color: rgba(255, 255, 255,.7 );
-      }
 
       }
       .listing-details{
@@ -239,7 +240,7 @@
           margin-right: 15px;
         }
         span{
-          display: inline-block;
+            display: inline-block;
             font-size: .8rem;
             font-weight: 300;
             vertical-align: top;
@@ -249,6 +250,7 @@
         }
         .floor-space{
         margin-bottom: 10px;
+        display: inline-block;
         }
 
 
@@ -289,6 +291,30 @@
   &:hover{
     background: $pink;
     cursor: pointer;
+  }
+}
+
+#pagination{
+  text-align: center;
+  .pages{
+    display: inline-block;
+    background: $white;
+    -webkit-box-shadow: 0px 9px 54px -4px rgba(235,232,235,1);
+    -moz-box-shadow: 0px 9px 54px -4px rgba(235,232,235,1);
+     box-shadow: 0px 9px 54px -4px rgba(235,232,235,1);
+
+  }
+  li{
+    display: inline-block;
+    padding: 20px 30px;
+
+    &:hover,
+    &.active{
+      background: $pink;
+      color: $white;
+      font-weight: 700;
+      cursor: pointer;
+    }
   }
 }
 

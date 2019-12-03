@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Welcome from './Components/Welcome'
 import Greet from './Components/Greet'
@@ -8,7 +8,7 @@ import EventTest from './Components/EventTest'
 import ParentComponent from './Components/ParentComponent'
 import NameList from './Components/NameList'
 import StyleSheet from './Components/Stylesheet'
-import FormsComp from './Components/FormsComp'
+// import FormsComp from './Components/FormsComp'
 import Godfred from './Components/Godfred'
 
 class App extends Component {
@@ -23,7 +23,7 @@ class App extends Component {
              <ParentComponent/>
              <NameList/>
               <StyleSheet/>
-              <FormsComp/>
+              {/* <FormsComp/> */}
 
             <Godfred/>
 
