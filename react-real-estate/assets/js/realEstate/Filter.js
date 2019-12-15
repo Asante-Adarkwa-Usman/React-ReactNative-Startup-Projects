@@ -6,7 +6,7 @@ export default class Filter extends Component {
   constructor () {
     super()
     this.state = {
-      name: 'Joe'
+      name: 'Asante Adarkwa Usman'
     }
   }
   clickedBtn = () => {

@@ -37,7 +37,7 @@ var Filter = function (_Component) {
     };
 
     _this.state = {
-      name: 'Joe'
+      name: 'Asante Adarkwa Usman'
     };
     return _this;
   }
@@ -815,7 +815,7 @@ var App = function (_Component) {
     };
 
     _this.state = {
-      name: 'Joe',
+      name: 'Asante Adarkwa Usman',
       listingsData: _ListingsData2.default,
       min_price: 0,
       max_price: 1000000,
