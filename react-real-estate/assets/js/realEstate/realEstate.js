@@ -11,6 +11,9 @@ class App extends Component {
     this.state = {
       name: 'Asante Adarkwa Usman',
       listingsData,
+       city: 'Atonsu',
+       homeType: 'Ranch',
+       rooms:1,
       min_price: 0,
       max_price : 1000000,
       min_floor_space : 1,
@@ -18,7 +21,8 @@ class App extends Component {
       elevator: false,
       finished_basement: false,
       gym: false,
-      swimming_pool:false
+      swimming_pool:false,
+      filteredData: listingsData
 
     }
   //  this.change = this.change.bind(this);
@@ -34,6 +38,7 @@ class App extends Component {
 
       }, () => {
         console.log(this.state)
+        this.filteredData()
       })
    }
 
@@ -41,13 +46,29 @@ class App extends Component {
   clickedBtn = () => {
     console.log('swag')
   }
+
+filteredData = () =>{
+ let newData = this.state.listingsData.filter( (item)=>{
+  return item.price >= this.state.min_price && item.price <= this.state.max_price
+   && item.floorSpace >= this.state.min_floor_space && item.floorSpace <= this.state.max_floor_space
+ })
+
+
+
+ this.setState({
+   filteredData:newData
+ })
+}
+
+
+
   render () {
 
     return (<div>
        <Header />
        <section id="content-area">
          <Filter  change={this.change} globalState={this.state} />
-         <Listings listingsData={this.state.listingsData} />
+         <Listings listingsData={this.state.filteredData} />
          </section>
       </div>
     )

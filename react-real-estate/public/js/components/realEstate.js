@@ -351,6 +351,12 @@ var Listings = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Listings.__proto__ || Object.getPrototypeOf(Listings)).call(this));
 
     _this.loopListings = function () {
+      var listingsData = _this.props.listingsData;
+
+
+      if (listingsData == undefined || listingsData.length == 0) {
+        return "Sorry your filter didn't match any listing";
+      }
 
       _react2.default.createElement(
         'div',
@@ -440,9 +446,6 @@ var Listings = function (_Component) {
           )
         )
       );
-
-      var listingsData = _this.props.listingsData;
-
 
       return listingsData.map(function (listings, index) {
         return _react2.default.createElement(
@@ -807,11 +810,22 @@ var App = function (_Component) {
 
       _this.setState(_defineProperty({}, name, value), function () {
         console.log(_this.state);
+        _this.filteredData();
       });
     };
 
     _this.clickedBtn = function () {
       console.log('swag');
+    };
+
+    _this.filteredData = function () {
+      var newData = _this.state.listingsData.filter(function (item) {
+        return item.price >= _this.state.min_price && item.price <= _this.state.max_price && item.floorSpace >= _this.state.min_floor_space && item.floorSpace <= _this.state.max_floor_space;
+      });
+
+      _this.setState({
+        filteredData: newData
+      });
     };
 
     _this.state = {
@@ -824,7 +838,8 @@ var App = function (_Component) {
       elevator: false,
       finished_basement: false,
       gym: false,
-      swimming_pool: false
+      swimming_pool: false,
+      filteredData: _ListingsData2.default
       //  this.change = this.change.bind(this);
     };return _this;
   }
@@ -841,7 +856,7 @@ var App = function (_Component) {
           'section',
           { id: 'content-area' },
           _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state }),
-          _react2.default.createElement(_Listings2.default, { listingsData: this.state.listingsData })
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData })
         )
       );
     }
